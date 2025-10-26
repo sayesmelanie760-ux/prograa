@@ -1,0 +1,47 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+       <h2>Modificar datos del proveedor</h2>
+    </div>
+       <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="mb-2">
+              <label for="">Nombre del proveedor:</label>
+            </div>
+            <div class="mb-2">
+              <input [(ngModel)]="proveedor.nombre" type="text" name="name" id="name" maxlength="13" class="form-control" placeholder="Ingrese su nombre y apellido">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mb-2">
+              <label for="">Detalle acerca del proveedor:</label>
+            </div>
+            <div class="mb-2">
+              <input [(ngModel)]="proveedor.detalleProveedor" type="text" name="nit" id="nit" class="form-control" placeholder="Ingrese su nit o c/f">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mb-2">
+              <label for="">Dirección:</label>
+            </div>
+            <div class="mb-2">
+              <input [(ngModel)]="proveedor.direccion" type="text" name="mail" id="mail" class="form-control" placeholder="Ingrese el correo">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="">Teléfono:</label>
+            <div class="mb-2">
+              <textarea [(ngModel)]="proveedor.telefono" name="phone" maxlength="250" class="form-control" placeholder="Ingrese su número de teléfono" required></textarea>
+            </div>
+          </div>
+            <button (click)="editProveedores(proveedor)" class="btn btn-outline-success" type="button">Guardar</button>
+          <span style="margin-left:1em"></span>
+          <button (click)="cancel()" class="btn btn-outline-danger"  type="button">Cancelar</button>
+        </form>
+       </div>
+    </div>
+  </div>
+
+
+

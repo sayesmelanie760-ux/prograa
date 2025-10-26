@@ -1,0 +1,44 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h2>Agregar Nuevo Proveedor</h2>
+    </div>
+    <div class="card-body">
+      <form class="needs-validation" novalidate>
+        <div class="form-group">
+          <div class="mb-2">
+            <label for="">Nombre del proveedor:</label>
+          </div>
+          <div class="mb-2">
+            <input [(ngModel)]="proveedor.nombre" type="text" name="name" id="name" class="form-control" placeholder="Ingrese nombre de la entidad o persona">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="mb-2">
+            <label for="">Detalle acerca del proveedor:</label>
+          </div>
+          <div class="mb-2">
+            <input [(ngModel)]="proveedor.detalleProveedor" type="text" name="nit" id="nit" class="form-control" placeholder="Ingrese detalle de proveedor">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="mb-2">
+            <label for="">Dirección:</label>
+          </div>
+          <div class="mb-2">
+            <input [(ngModel)]="proveedor.direccion" type="text" name="mail" id="mail" class="form-control" placeholder="Ingrese la dirección">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Teléfono:</label>
+          <div class="mb-2">
+            <textarea [(ngModel)]="proveedor.telefono" name="phone" maxlength="250" class="form-control" placeholder="Ingrese su número de teléfono" required></textarea>
+          </div>
+        </div>
+        <button (click)="save(proveedor)" type="button" class="btn btn-outline-success">Guardar</button>
+        <span style="margin-left:1em"></span>
+        <button (click)="cancel()" type="button" class="btn btn-outline-danger">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

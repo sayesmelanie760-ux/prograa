@@ -1,0 +1,57 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+       <h2>Modificar datos del cliente</h2>
+    </div>
+       <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="mb-2">
+              <label for="">nombre del cliente:</label>
+            </div>
+            <div class="mb-2">
+              <input [(ngModel)]="cliente.nombre"  type="text" name="name"  disabled  id="name"  class="form-control" placeholder="ID" required>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="mb-2">
+                <label for="">Password del cliente:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="cliente.password" type="text" name="password"  id="password" #myFocus class="form-control" placeholder="Ingrese nueva password" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="mb-2">
+                <label for="">Nit del cliente:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="cliente.nit" type="text" name="nit"  id="nit" #myFocus class="form-control" placeholder="Ingrese nit" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="mb-2">
+                <label for="">Correo del cliente:</label>
+              </div>
+              <div class="mb-2">
+                <textarea [(ngModel)]="cliente.correo" name="mail" maxlength="250" class="form-control" placeholder="Ingrese nuevo correo" required></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="mb-2">
+                <label for="">Teléfono del cliente:</label>
+              </div>
+              <div class="mb-2">
+                <textarea [(ngModel)]="cliente.telefono" name="phone" maxlength="250" class="form-control" placeholder="Ingrese nuevo telefono" required></textarea>
+              </div>
+            </div>
+            <button (click)="editClientes(cliente)" class="btn btn-outline-success" type="button">Guardar</button>
+          <span style="margin-left:1em"></span>
+          <button (click)="cancel()" class="btn btn-outline-danger"  type="button">Cancelar</button>
+        </form>
+       </div>
+    </div>
+  </div>
+
+
+

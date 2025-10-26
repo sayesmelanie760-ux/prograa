@@ -1,0 +1,71 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+       <h2>Modificar un producto</h2>
+       <div class="card-body">
+        <form for="" class="needs-validation" novalidate>
+            <div class="form-group">
+              <div class="mb-2">
+                <label for="">Código del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.codigo" type="text" name="isbn"  id="isbn" maxlength="13" class="form-control" disabled="true">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="mb-2">
+                <label for="">Nombre del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.nombre" type="text"  name="name"  id="name"  class="form-control" placeholder="Ingrese el Nombre">
+              </div>
+              <div class="mb-2">
+                <label for="">Descripción del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.descripcion" type="text"  name="descripcion"  id="descripcion"  class="form-control" placeholder="Ingrese el Nombre">
+              </div>
+              <div class="mb-2">
+                <label for="">Precio del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.precio" type="text"  name="precio"  id="precio"  class="form-control" placeholder="Ingrese el Nombre">
+              </div>
+              <div class="mb-2">
+                <label for="">Categoría del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.categoria" type="text"  name="categoria"  id="categoria"  class="form-control" placeholder="Ingrese el Nombre">
+              </div>
+              <div class="mb-2">
+                <label for="">Cantidad disponible del producto:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="producto.cantidadDisponible" type="text"  name="cantidad"  id="cantidad "  class="form-control" placeholder="Ingrese el Nombre">
+              </div>
+            <!-- <div class="mb-2">
+                <label for="">Autor del libro:</label>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="book.author" type="text"  name="author"  id="author"  class="form-control" placeholder="Ingrese el Autor">
+              </div>
+              -->
+              <div class="mb-2">
+                <label for="author">Proveedor:</label>
+              </div>
+              <div class="mb-2">
+                <select class="form-select" id="proveedor" name="proveedor" [(ngModel)]="selectedProveedor">
+
+                  <option *ngFor="let proveedor of availableProveedores" [value]="proveedor.idProveedor">{{ proveedor.nombre }}</option>
+                </select>
+              </div>
+            </div>
+             <button (click)="editProductos(producto)" type="button" class="btn btn-outline-success">Guardar</button>
+             <span style="margin-left:1em"></span>
+             <button (click)="cancel()" type="button" class="btn btn-outline-danger">Cancelar</button>
+                </form>
+       </div>
+    </div>
+  </div>
+ </div>
+
